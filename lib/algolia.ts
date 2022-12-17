@@ -1,4 +1,5 @@
 import algoliasearch from "algoliasearch";
+// import "dotenv/config";
 
 const client = algoliasearch(
   "K98RO3JPW0",

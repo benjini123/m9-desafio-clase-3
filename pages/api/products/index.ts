@@ -7,15 +7,14 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
     .search(q as string, {
       hitsPerPage: 50,
     })
-    .then(({ hits }) => {
+    .then((hits) => {
       res.json({
         results: hits,
         pagination: {
           offset: offset,
           limit: limit,
-          total: hits.length,
+          total: hits.nbHits,
         },
       });
-      // console.log(hits);
     });
 }
