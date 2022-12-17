@@ -9,7 +9,7 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
     })
     .then((hits) => {
       res.json({
-        results: hits,
+        results: [hits],
         pagination: {
           offset: offset,
           limit: limit,
