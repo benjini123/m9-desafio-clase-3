@@ -16,5 +16,8 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
           total: hits.nbHits,
         },
       });
+    })
+    .catch((err) => {
+      res.json(err);
     });
 }
